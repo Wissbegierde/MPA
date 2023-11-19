@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <link href='{% static "css/pong.css" %}' type="text/css" rel="stylesheet">
+</head>
+<body >
+    <div>Utilize el mouse para mover la barra</div>
+    <canvas id="gamescreen" width="450" height="450">
+    </canvas>
+    <div id="scoreBoard">
+      Jugador 1 Puntuacion: <span id="score">0</span>
+    </div>
+    <form action="/menu/{{user.username}}/" method="POST">{% csrf_token %}
+    <input type='hidden' name='pongScore' id='pongScore' value=''>
+    <input type="hidden" id="hangmanScore" name="hangmanScore" value=''>
+    <input type="hidden" name='ticXScore' id="marcador-X" value=''>
+    <input type="hidden" name='tic0Score' id="marcador-O" value=''>
+    <input type="hidden" id="snakeScore" name="snakeScore" value="">
+
+    <input type="submit" class="game-link" value="Menu">
+    </form>
+    <script src='{% static "js/pong.js" %}'></script> 
+</body>
+</html>

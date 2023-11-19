@@ -1,7 +1,9 @@
 # PROYECTO MPA
 Joan Sebastian Pedraza Nova - 2210100
+
 Juan David Mena Gamboa - 2221886
 
+#
 Para ejecutar este proyecto en local hay que seguir estos pasos:
 #
 
